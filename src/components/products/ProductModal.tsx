@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import type { Product } from "@/types";
 import { useCart } from "@/lib/cart-context";
 import { getProductFallbackImage } from "@/lib/products";
+import { getWhatsAppContactUrl } from "@/lib/whatsapp";
 import { Button } from "@/components/ui/Button";
 import { ProductImage } from "@/components/ui/ProductImage";
 
@@ -46,6 +47,16 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
   }, [handleKey]);
 
   if (!product) return null;
+
+  const whatsappUrl = getWhatsAppContactUrl(
+    [
+      "Hi! I'd like to order from Mondo Wooden Utensils:",
+      "",
+      `• ${product.name} × ${qty} — $${(product.price * qty).toFixed(2)}`,
+      "",
+      "Please let me know the next steps. Thank you!",
+    ].join("\n")
+  );
 
   const handleAdd = () => {
     addItem(product, qty);
@@ -132,11 +143,11 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
             {/* ── Details panel ── */}
             <div className="flex flex-col p-6 md:p-8 md:overflow-y-auto gap-4">
               {/* Name & price */}
-              <div className="flex items-start justify-between gap-4">
+              <div className="flex flex-col gap-2 pr-12">
                 <h2 className="font-display text-2xl md:text-3xl text-charcoal-900 dark:text-cream-50 leading-tight">
                   {product.name}
                 </h2>
-                <span className="font-display text-2xl text-gold-600 dark:text-gold-400 shrink-0 mt-0.5">
+                <span className="font-display text-2xl text-gold-600 dark:text-gold-400">
                   ${product.price}
                 </span>
               </div>
@@ -217,6 +228,19 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
                   )}
                 </Button>
               </div>
+
+              {whatsappUrl && (
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="w-full"
+                  href={whatsappUrl}
+                  external
+                  onClick={onClose}
+                >
+                  Order via WhatsApp
+                </Button>
+              )}
 
               {/* Trust badges */}
               <div className="flex flex-wrap gap-3 text-xs text-charcoal-500 dark:text-cream-500">
