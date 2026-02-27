@@ -66,7 +66,7 @@ export function SocialImpact() {
               <p className="font-display text-cream-100 text-base sm:text-lg italic">
                 "Wood gave us a way back. Now we're building futures, one piece at a time."
               </p>
-              <p className="mt-2 text-gold-400 text-sm">— Partner artisan, Mondo Wood</p>
+              <p className="mt-2 text-gold-400 text-sm">— Partner artisan, Mondo Wooden Utensils</p>
             </div>
           </motion.div>
         </div>

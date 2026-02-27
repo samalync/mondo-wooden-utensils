@@ -18,7 +18,7 @@ const storyBlocks = [
   },
   {
     title: "After",
-    body: "Through Mondo Wood, artisan workshops receive fair orders and training. Wood is sourced responsibly; every piece is made with dignity. Families earn again. Kitchens become plastic-free, and health and hope both grow.",
+    body: "Through Mondo Wooden Utensils, artisan workshops receive fair orders and training. Wood is sourced responsibly; every piece is made with dignity. Families earn again. Kitchens become plastic-free, and health and hope both grow.",
   },
 ];
 
@@ -40,7 +40,7 @@ export default function ImpactPage() {
             How your purchase supports communities
           </h1>
           <p className="mt-6 sm:mt-8 text-base sm:text-lg text-charcoal-600 dark:text-cream-400 max-w-2xl mx-auto">
-            Every Mondo Wood product connects your kitchen to a global mission: less
+            Every Mondo Wooden Utensils product connects your kitchen to a global mission: less
             plastic, more dignity, and real opportunity for displaced artisans.
           </p>
         </div>
@@ -84,7 +84,7 @@ export default function ImpactPage() {
               "Wood gave us a way back. Now we're building futures, one piece at a time."
             </p>
             <cite className="mt-6 block text-gold-400 not-italic">
-              — Partner artisan, Mondo Wood
+              — Partner artisan, Mondo Wooden Utensils
             </cite>
           </motion.blockquote>
         </div>

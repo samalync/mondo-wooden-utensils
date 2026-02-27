@@ -28,7 +28,7 @@ export function LoadingScreen({ isLoading }: LoadingScreenProps) {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
             >
-              Mondo Wood
+              Mondo Wooden Utensils
             </motion.span>
           </div>
         </motion.div>

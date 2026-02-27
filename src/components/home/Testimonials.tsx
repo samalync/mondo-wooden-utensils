@@ -6,7 +6,7 @@ const testimonials = [
   {
     id: "1",
     quote:
-      "Switching to Mondo Wood was one of the best decisions for our family. We feel good knowing we're reducing plastic and supporting real people. The quality is exceptional.",
+      "Switching to Mondo Wooden Utensils was one of the best decisions for our family. We feel good knowing we're reducing plastic and supporting real people. The quality is exceptional.",
     author: "Sarah Chen",
     role: "Home cook & parent",
   },
