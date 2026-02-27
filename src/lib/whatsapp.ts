@@ -5,10 +5,10 @@ import type { CartItem } from "@/types";
  * Example: 1234567890 (US), 447700900123 (UK)
  * Set in .env.local as NEXT_PUBLIC_WHATSAPP_NUMBER
  */
-const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "";
+const FALLBACK_WHATSAPP_NUMBER = "250790701620";
+const WHATSAPP_NUMBER = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "").trim() || FALLBACK_WHATSAPP_NUMBER;
 
-export function getWhatsAppOrderUrl(items: CartItem[], totalPrice: number): string | null {
-  if (!WHATSAPP_NUMBER) return null;
+export function getWhatsAppOrderUrl(items: CartItem[], totalPrice: number): string {
 
   const lines = [
     "Hi! I'd like to place an order from Mondo Wooden Utensils:",
@@ -32,8 +32,7 @@ export function hasWhatsAppOrderEnabled(): boolean {
 }
 
 /** Pre-filled WhatsApp chat link for general contact (no order). */
-export function getWhatsAppContactUrl(message?: string): string | null {
-  if (!WHATSAPP_NUMBER) return null;
+export function getWhatsAppContactUrl(message?: string): string {
   const text =
     message ||
     "Hi, I'd like to get in touch with Mondo Wooden Utensils.";

@@ -229,18 +229,16 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
                 </Button>
               </div>
 
-              {whatsappUrl && (
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="w-full"
-                  href={whatsappUrl}
-                  external
-                  onClick={onClose}
-                >
-                  Order via WhatsApp
-                </Button>
-              )}
+              <Button
+                size="lg"
+                variant="outline"
+                className="w-full"
+                href={whatsappUrl}
+                external
+                onClick={onClose}
+              >
+                Order via WhatsApp
+              </Button>
 
               {/* Trust badges */}
               <div className="flex flex-wrap gap-3 text-xs text-charcoal-500 dark:text-cream-500">
