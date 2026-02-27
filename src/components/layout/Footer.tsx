@@ -45,7 +45,7 @@ export function Footer() {
                   />
                 </span>
                 <span className="font-display text-xl sm:text-2xl font-semibold text-cream-100">
-                  Mondo <span className="text-gold-400">Wood</span>
+                  Mondo Wooden <span className="text-gold-400">Utensils</span>
                 </span>
               </Link>
               <p className="text-cream-400 text-xs sm:text-sm mt-2 max-w-xs">

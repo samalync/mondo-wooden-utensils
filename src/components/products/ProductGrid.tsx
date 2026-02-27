@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { AnimatePresence } from "framer-motion";
 import { products } from "@/lib/products";
 import { FilterBar, type CategoryId } from "./FilterBar";
@@ -24,12 +25,13 @@ function getCategoryFromSearch(): CategoryId {
 }
 
 export function ProductGrid() {
+  const searchParams = useSearchParams();
   const [activeCategory, setActiveCategory] = useState<CategoryId>("all");
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   useEffect(() => {
     setActiveCategory(getCategoryFromSearch());
-  }, []);
+  }, [searchParams]);
 
   const filtered = useMemo(() => {
     if (activeCategory === "all") return products;
