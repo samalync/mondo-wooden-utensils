@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --gold: #C6A75E;
+    --gold-light: #E5D9B8;
+    --cream: #FDFBF5;
+    --charcoal: #1A1A1A;
+    --foreground: #1A1A1A;
+    --background: #FDFBF5;
+  }
+
+  .dark {
+    --foreground: #FDFBF5;
+    --background: #0F0F0F;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply bg-cream-100 text-charcoal-800 font-sans antialiased;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  .dark body {
+    @apply bg-charcoal-900 text-cream-100;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .section-padding {
+    @apply px-4 sm:px-6 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 md:py-20 lg:py-24;
+  }
+
+  .container-narrow {
+    @apply max-w-4xl mx-auto w-full;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto w-full;
+  }
+}
+
+/* Premium selection color */
+::selection {
+  background-color: rgba(198, 167, 94, 0.25);
+}
+
+.dark ::selection {
+  background-color: rgba(198, 167, 94, 0.35);
+}
